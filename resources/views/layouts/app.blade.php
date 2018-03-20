@@ -10,7 +10,8 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <title>@yield('title', 'BBS')</title>
-    <meta name="description" content="@yield('description', 'BBS')" />
+    <meta name="description" content="@yield('description', setting('seo_description', 'BBS'))" />
+    <meta name="keyword" content="@yield('keyword', setting('seo_keyword', 'BBS,社区,论坛,开发者论坛'))" />
 
     <!-- Styles -->
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
